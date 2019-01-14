@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# authorized by zhq
+
 
 import numpy as np
 import matplotlib.pylab as plt
@@ -13,13 +13,15 @@ def sigmoid(x):
 def relu(x):
     return np.maximum(0, x)
 
-x = np.arange(-5.0, 5.0, 0.1)
-#y = step_function(x)
-#y = sigmoid(x)
-y = relu(x)
-plt.plot(x, y)
-plt.ylim(-0.1, 1.1)
-plt.show()
+def test0():
+    x = np.arange(-5.0, 5.0, 0.1)
+    #y = step_function(x)
+    #y = sigmoid(x)
+    y = relu(x)
+    plt.plot(x, y)
+    plt.ylim(-0.1, 1.1)
+    plt.show()
+ 
 
 def idetity_function(x):
     return x
@@ -52,10 +54,11 @@ def forward(network, x):
     y= idetity_function(a3)
     return y
 
-network = init_network()
-x = np.array([1.0, 0.5])
-y = forward(network, x)
-print(y)
+def test1():
+    network = init_network()
+    x = np.array([1.0, 0.5])
+    y = forward(network, x)
+    print(y)
 
 
 
